@@ -1,30 +1,19 @@
 [gd_scene load_steps=3 format=3 uid="uid://dmx2xuigcpvt4"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_c326s"]
 [ext_resource type="Texture2D" uid="uid://cswr8vy4lt7dt" path="res://icon.png" id="2_g6d0b"]
+[ext_resource type="Script" path="res://GDExample.gd" id="3_yl4lm"]
 
 [node name="Node" type="Node"]
-script = ExtResource("1_c326s")
-
-[node name="Example" type="Example" parent="."]
-
-[node name="ExampleMin" type="ExampleMin" parent="Example"]
-layout_mode = 0
-
-[node name="Label" type="Label" parent="Example"]
-layout_mode = 0
-offset_left = 194.0
-offset_top = -2.0
-offset_right = 234.0
-offset_bottom = 21.0
 
 [node name="Button" type="Button" parent="."]
 offset_right = 79.0
 offset_bottom = 29.0
 text = "Click me!"
 
-[node name="GDExample" type="GDExample" parent="."]
-position = Vector2(5.08292, 13.8929)
-texture = ExtResource("2_g6d0b")
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(100, 100)
 
-[connection signal="custom_signal" from="Example" to="." method="_on_Example_custom_signal"]
+[node name="GDExample" type="GDExample" parent="Node2D"]
+position = Vector2(13.0537, 1.48864)
+texture = ExtResource("2_g6d0b")
+script = ExtResource("3_yl4lm")

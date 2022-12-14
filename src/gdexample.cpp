@@ -5,6 +5,8 @@ using namespace godot;
 
 void GDExample::_bind_methods() {
     ClassDB::bind_method(D_METHOD("move"), &GDExample::move);
+    BIND_ENUM_CONSTANT(FIRST);
+	BIND_ENUM_CONSTANT(ANSWER_TO_EVERYTHING);
 }
 
 GDExample::GDExample() {
@@ -17,7 +19,7 @@ GDExample::~GDExample() {
 }
 
 void GDExample::_process(float delta) {
-    move(delta);
+    // move(delta);
 }
 
 void GDExample::move(float delta) {

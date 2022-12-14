@@ -3,7 +3,7 @@
 
 #include <godot_cpp/classes/sprite2d.hpp>
 
-namespace godot {
+using namespace godot;
 
 class GDExample : public Sprite2D {
     GDCLASS(GDExample, Sprite2D)
@@ -15,6 +15,11 @@ protected:
     static void _bind_methods();
 
 public:
+    enum Constants {
+            FIRST,
+            ANSWER_TO_EVERYTHING = 42,
+    };
+    
     GDExample();
     ~GDExample();
 
@@ -25,6 +30,6 @@ public:
     void move(float delta);
 };
 
-}
+VARIANT_ENUM_CAST(GDExample, Constants);
 
 #endif
