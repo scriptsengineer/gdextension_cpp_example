@@ -13,6 +13,7 @@
 
 #include "example.h"
 #include "gdexample.h"
+#include "item.h"
 #include "tests.h"
 
 using namespace godot;
@@ -28,6 +29,7 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 	ClassDB::register_class<ExampleVirtual>(true);
 	ClassDB::register_abstract_class<ExampleAbstract>();
 	ClassDB::register_class<GDExample>();
+	ClassDB::register_class<Item>();
 }
 
 void uninitialize_example_module(ModuleInitializationLevel p_level) {

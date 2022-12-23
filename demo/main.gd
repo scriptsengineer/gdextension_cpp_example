@@ -4,6 +4,9 @@ func _ready():
 	# Bind signals
 	prints("Signal bind")
 	$Button.button_up.connect($Example.emit_custom_signal.bind("Button", 42))
+	var item = Item.new()
+	item.max_amount = 2
+	print("ITEM:",item.max_amount)
 
 	prints("")
 
