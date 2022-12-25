@@ -1,4 +1,7 @@
-[gd_resource type="Item" format=3 uid="uid://423tsvi6sxef"]
+[gd_resource type="Item" load_steps=2 format=3 uid="uid://423tsvi6sxef"]
+
+[sub_resource type="CurveTexture" id="CurveTexture_injhg"]
 
 [resource]
-max_amount = 5
+name = "Item name"
+icon = SubResource("CurveTexture_injhg")

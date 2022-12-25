@@ -5,8 +5,12 @@ func _ready():
 	prints("Signal bind")
 	$Button.button_up.connect($Example.emit_custom_signal.bind("Button", 42))
 	var item = Item.new()
-	item.max_amount = 2
-	print("ITEM:",item.max_amount)
+	print("ITEM:",item.max_stack)
+	print("Item:",item.name)
+	item.max_stack = 2
+	item.name = "MEU ITEM"
+	print("ITEM:",item.max_stack)
+	print("Item:",item.name)
 
 	prints("")
 
